@@ -1,0 +1,49 @@
+{
+  "name": "andrey-kuzmichev/vk-rest-api-template",
+  "description": "PHP template for REST API (vk sign)",
+  "type": "project",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Andrey-Kuzmichev",
+      "email": "andrey.kuzmichev.2002@mail.ru"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Api\\": "api/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "ext-curl": "*",
+    "vlucas/phpdotenv": "5.6"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "phpunit/phpunit": "11.5",
+    "phpstan/phpstan": "2.1",
+    "phpstan/phpstan-phpunit": "2.0",
+    "phpstan/phpstan-strict-rules": "2.0"
+  },
+  "scripts": {
+    "route:cache": "php api/Scripts/Route/GenerateRouteCacheScript.php",
+    "route:clear": "php api/Scripts/Route/ClearRouteCacheScript.php",
+    "phpunit:test": "./vendor/bin/phpunit tests",
+    "phpstan:analyse": "./vendor/bin/phpstan analyse -c phpstan.neon",
+    "composer:autoload-optimize": "composer dump-autoload --optimize",
+    "composer:autoload-optimize-prod": "composer dump-autoload --optimize --no-dev"
+  }
+}

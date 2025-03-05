@@ -1,0 +1,7 @@
+.idea/
+vendor/
+caches/
+composer.phar
+.env
+.env.production
+.env.development

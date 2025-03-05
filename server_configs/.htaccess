@@ -1,0 +1,16 @@
+Options -Indexes
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+Header always set Access-Control-Allow-Origin '*'
+
+<If "%{REQUEST_METHOD} = 'OPTIONS'">
+    Header set Access-Control-Allow-Methods '*'
+    Header set Access-Control-Allow-Headers 'Content-Type, Authorization'
+</If>
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^api/(.*)$ /src/index.php/$1 [L]
