@@ -2,7 +2,7 @@
 
 ## Описание
 
-**VK Rest Api Template** – это шаблон для быстрой разработки REST API на PHP с использованием MySQL.
+**VK Rest Api Template** – это бойлерплейт для быстрой разработки REST API на PHP с использованием MySQL.
 
 ## Технологии
 
